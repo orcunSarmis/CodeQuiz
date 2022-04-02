@@ -9,15 +9,18 @@ var divTimer = document.createElement("timer");
 var divClock = document.createElement("divclock");
 var divQuiz = document.createElement("divQuiz");
 var divResult = document.createElement("divResult");
+var rules = document.querySelector(".rules");
 
 
 var secondLeft = 60;
 var timer;
 h1El.textContent = "Code Quiz";
+divClock.textContent ="Time";
 
 
 var myQuestions = [
     {
+        numb: 1,
         question: "Who invented JavaScript?",
         answers: {
           a: "Douglas Crockford",
@@ -27,6 +30,7 @@ var myQuestions = [
         correctAnswer: "c"
       },
       {
+          numb: 2,
         question: "Which one of these is a JavaScript package manager?",
         answers: {
           a: "Node.js",
@@ -36,6 +40,7 @@ var myQuestions = [
         correctAnswer: "c"
       },
       {
+          numb: 3,
         question: "Which tool can you use to ensure code quality?",
         answers: {
           a: "Angular",
@@ -47,6 +52,18 @@ var myQuestions = [
       }
     ];
 
+    addsection = () => {
+        var div = document.getElementById("addhere");
+        html = `
+        <div class="rules">
+        <div class="rule">Try to find correct answer in the options.</div>
+        <div class="rule">You must complete all questions in time limit.</div>
+        <div class="rule">Incorrect answers will penalize your score/time by ten seconds.</div>
+    </div>
+    `
+    div.innerHTML = html;
+    }
+
 
 document.body.appendChild(h1El);
 document.body.appendChild(divBtn);
@@ -54,10 +71,10 @@ document.body.appendChild(divClock);
 document.body.appendChild(divQuiz);
 document.body.appendChild(divResult);
 startBtn.appendChild(text);
-divBtn.appendChild(startBtn);
+document.body.appendChild(startBtn);
 document.body.appendChild(divTimer);
 document.getElementsByClassName(divBtn);
-// document.getElementsByClassName(clockTime);
+
 
 
 h1El.classList.add("quiz-title");
@@ -68,8 +85,8 @@ divClock.classList.add("clockCl");
 divQuiz.classList.add("quizCon");
 
 h1El.setAttribute("style", "font-size: 50px; font-wiegth: bold; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;  color: red;");
-divBtn.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: center; align-items: center;");
-// clockTime.setAttribute("style", "display: flex; flex-warp: wrap; justify-content: flex-end;");
+startBtn.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: center;  text-align: center; font-size: 25px; font-weight: 500; background: #557A95; color: #5D5C61;");
+divClock.setAttribute("style", "display: flex; flex-warp: wrap; justify-content: flex-end;");
 divQuiz.setAttribute("id", "quiz");
 divBtn.setAttribute("id", "div-1");
 divClock.setAttribute("id", "clock");
@@ -81,12 +98,21 @@ function start() {
 
 function callBack() {
     secondLeft--;
-    divClock.textContent = secondLeft;
+    divClock.textContent = "Time: " + secondLeft;
 
 
     if (secondLeft === 0) {
         clearInterval(timer);
     }
+}
+
+startBtn.onclick = ()=> {
+    rules.classList.add("activerules"); // show rules
+}
+
+function showQuestion() {
+
+
 }
 // start();
 
