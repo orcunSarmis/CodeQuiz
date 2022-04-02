@@ -10,6 +10,7 @@ var divClock = document.createElement("divclock");
 var divQuiz = document.createElement("divQuiz");
 var divResult = document.createElement("divResult");
 var rules = document.querySelector(".rules");
+document.getElementById("quizRules").style.display = "none";
 
 
 var secondLeft = 60;
@@ -52,17 +53,6 @@ var myQuestions = [
       }
     ];
 
-    addsection = () => {
-        var div = document.getElementById("addhere");
-        html = `
-        <div class="rules">
-        <div class="rule">Try to find correct answer in the options.</div>
-        <div class="rule">You must complete all questions in time limit.</div>
-        <div class="rule">Incorrect answers will penalize your score/time by ten seconds.</div>
-    </div>
-    `
-    div.innerHTML = html;
-    }
 
 
 document.body.appendChild(h1El);
