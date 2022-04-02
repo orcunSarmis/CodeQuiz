@@ -1,5 +1,3 @@
-var timeEl = document.querySelector(".time");
-var mainEl = document.getElementById("main");
 var startButton = document.querySelector(".start-button");
 var h1El = document.createElement("h1");
 let startBtn = document.createElement("button");
@@ -10,7 +8,7 @@ var divClock = document.createElement("divclock");
 var divQuiz = document.createElement("divQuiz");
 var divResult = document.createElement("divResult");
 var rules = document.querySelector(".rules");
-document.getElementById("quizRules").style.display = "none";
+// document.getElementById("quizRules").style.display = "none";
 
 
 var secondLeft = 60;
@@ -75,8 +73,8 @@ divClock.classList.add("clockCl");
 divQuiz.classList.add("quizCon");
 
 h1El.setAttribute("style", "font-size: 50px; font-wiegth: bold; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;  color: red;");
-startBtn.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: center;  text-align: center; font-size: 25px; font-weight: 500; background: #557A95; color: #5D5C61;");
-divClock.setAttribute("style", "display: flex; flex-warp: wrap; justify-content: flex-end;");
+startBtn.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: center;  text-align: center; font-size: 25px; font-weight: 500; background: #557A95; color: #5D5C61; padding: 15px 30px; border-radius: 5px;");
+divClock.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: flex-end;");
 divQuiz.setAttribute("id", "quiz");
 divBtn.setAttribute("id", "div-1");
 divClock.setAttribute("id", "clock");
@@ -96,9 +94,13 @@ function callBack() {
     }
 }
 
-startBtn.onclick = ()=> {
-    rules.classList.add("activerules"); // show rules
-}
+// startBtn.onclick = function () {
+//     if (quizRules.style.display !== "none") {
+//         quizRules.style.display = "none";
+//     }else {
+//         quizRules.style.display = "block";
+//     }
+// }
 
 function showQuestion() {
 
