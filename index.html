@@ -10,7 +10,7 @@
 <body>
     <div class="code"><h1 class="quiztitle">Code Quiz</h1></div>
 
-    <div class="timer" id="timerClock">Time: </div>
+    <div class="timer" id="timerClock">Score </div>
 
     
 
@@ -23,7 +23,14 @@
     </div>
 </section>
 
-<div class="startBtn"><button class="startQ" id="startQuiz">Start Quiz</button></div>
+<section class="hide myQ">
+    <p id="displayedQuestion"></p>
+    <button id="option1"></button>
+    <button id="option2"></button>
+    <button id="option3"></button>
+</section>
+
+<div class="startBtn"><button id="startQuiz">Start Quiz</button></div>
 
     <script src="./assets/js/script.js"></script>
 </body>

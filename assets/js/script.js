@@ -1,8 +1,13 @@
 // var startBtn = document.querySelector(".startBtn button");
 var timerClock = document.getElementById(".timerClock");
 // var startBtn = document.getElementsByClassName("startBtn");
-var startQ = document.getElementsByClassName(".startQ");
-var timer = document.getElementsByClassName(".timer");
+// var startQ = document.getElementsByClassName(".startQ");
+var startQ = document.querySelector("#startQuiz");
+var showTimer = document.querySelector("#timerClock");
+var index = 0;
+ 
+
+console.log(startQ);
 
 var secondLeft = 60;
 var timer;
@@ -12,60 +17,84 @@ var myQuestions = [
         numb: 1,
         question: "Who invented JavaScript?",
         answers: {
-          a: "Douglas Crockford",
-          b: "Sheryl Sandberg",
-          c: "Brendan Eich"
+          option1: "Douglas Crockford",
+          option2: "Sheryl Sandberg",
+          option3: "Brendan Eich"
         },
-        correctAnswer: "c"
+        correctAnswer: "Brendan Eich"
       },
       {
           numb: 2,
         question: "Which one of these is a JavaScript package manager?",
         answers: {
-          a: "Node.js",
-          b: "TypeScript",
-          c: "npm"
+          option1: "Node.js",
+          option2: "TypeScript",
+          option3: "npm"
         },
-        correctAnswer: "c"
+        correctAnswer: "npm"
       },
       {
           numb: 3,
         question: "Which tool can you use to ensure code quality?",
         answers: {
-          a: "Angular",
-          b: "jQuery",
-          c: "RequireJS",
-          d: "ESLint"
+          option1: "Angular",
+          option2: "jQuery",
+          option3: "ESLint"
         },
-        correctAnswer: "d"
+        correctAnswer: "ESLint"
       }
     ];
 
 
 function start() {
-  timer = setInterval(callBack,1000)
+  timer = setInterval(callBack,1000);
+  showQuestion();
 }
 
 function callBack() {
     secondLeft--;
-    timer.textContent = secondLeft;
+    showTimer.textContent = "Score: " + secondLeft;
 
 
-    if (secondLeft === 0) {
+    if (secondLeft < 1) {
         clearInterval(timer);
+        endGame();
     }
+    console.log(secondLeft);
 }
 
-startQ.onclick = function() {
-
-}
 
 function showQuestion() {
+  index++;
+  var displayedQuestion = document.querySelector("#displayedQuestion");
+  var option1 = document.querySelector("#option1");
+  var option2 = document.querySelector("#option2");
+  var option3 = document.querySelector("#option3");
+  console.log("show");
 
+  displayedQuestion.textContent = myQuestions[index].question;
+
+  if (!quizRules.classList.contains("hide")) {
+      quizRules.classList.add("hide");
+       
+  }
+
+  option1.addEventListener('click', verifyAnswer);
+  option2.addEventListener('click', verifyAnswer);
+  option3.addEventListener('click', verifyAnswer);
 }
-// start();
 
-document.querySelector("startQ");
+function verifyAnswer(){
+  //verify the answers here
+  //find the id of the button clicked
+}
+// start();\
+
+function endGame(){
+  //this function wil run based on multiple conditions 
+}
+
+
 startQ.addEventListener("click", start);
 
 
