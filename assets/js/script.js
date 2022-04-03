@@ -1,5 +1,7 @@
-var startBtn = document.querySelector(".startBtn button");
-var timerClock = document.getElementById("timerClock");
+// var startBtn = document.querySelector(".startBtn button");
+var timerClock = document.getElementById(".timerClock");
+// var startBtn = document.getElementsByClassName("startBtn");
+var startQ = document.getElementsByClassName(".startQ");
 
 var secondLeft = 60;
 var timer;
@@ -45,7 +47,7 @@ function start() {
 
 function callBack() {
     secondLeft--;
-    // timer.textContent = secondLeft;
+    timer.textContent = secondLeft;
 
 
     if (secondLeft === 0) {
@@ -53,22 +55,17 @@ function callBack() {
     }
 }
 
-// startBtn.onclick = function () {
-//     if (quizRules.style.display !== "none") {
-//         quizRules.style.display = "none";
-//     }else {
-//         quizRules.style.display = "block";
-//     }
-// }
+startQ.onclick = function() {
+
+}
 
 function showQuestion() {
-
 
 }
 // start();
 
-document.querySelector("startBtn");
-startBtn.addEventListener("click", start);
+document.querySelector("startQ");
+startQ.addEventListener("click", start);
 
 
 
@@ -141,3 +138,9 @@ startBtn.addEventListener("click", start);
 // divBtn.setAttribute("id", "div-1");
 // divClock.setAttribute("id", "clock");
 // divTimer.setAttribute("id", "divtime");
+
+    // if (quizRules.style.display !== "none") {
+    //     quizRules.style.display = "none";
+    // }else {
+    //     quizRules.style.display = "block";
+    // }
