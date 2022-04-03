@@ -65,7 +65,7 @@ function callBack() {
 
 
 function showQuestion() {
-  // index++;
+  index++;
   var displayedQuestion = document.querySelector("#displayedQuestion");
   var option1 = document.querySelector("#option1");
   var option2 = document.querySelector("#option2");
@@ -73,24 +73,27 @@ function showQuestion() {
   // console.log("show");
 
   displayedQuestion.textContent = myQuestions[index].question;
+  option1.textContent = myQuestions[index].answers;
+  option2.textContent = myQuestions[index].answers;
+  option3.textContent = myQuestions[index].answers;
+  // console.log("show");
 
   if (!quizRules.classList.contains("hide")) {
       quizRules.classList.add("hide");
-       
+      
+      
   }
-
-  // option1.addEventListener('click', verifyAnswer);
-  // option2.addEventListener('click', verifyAnswer);
-  // option3.addEventListener('click', verifyAnswer);
-}
-
-function verifyAnswer(){
 
   option1.addEventListener('click', verifyAnswer);
   option2.addEventListener('click', verifyAnswer);
   option3.addEventListener('click', verifyAnswer);
+}
 
-  index++;
+function verifyAnswer(){
+
+
+
+  // index++;
   showQuestion();
   //verify the answers here
   //find the id of the button clicked
