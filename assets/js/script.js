@@ -47,6 +47,7 @@ var myQuestions = [
 
 
 function start() {
+  quizRules.style.display = "none";
   timer = setInterval(callBack,1000);
   showQuestion();
 }
@@ -73,9 +74,9 @@ function showQuestion() {
   // console.log("show");
 
   displayedQuestion.textContent = myQuestions[index].question;
-  option1.textContent = myQuestions[index].answers;
-  option2.textContent = myQuestions[index].answers;
-  option3.textContent = myQuestions[index].answers;
+  option1.textContent = myQuestions[index].answers.option1;
+  option2.textContent = myQuestions[index].answers.option2;
+  option3.textContent = myQuestions[index].answers.option3;
   // console.log("show");
 
   if (!quizRules.classList.contains("hide")) {
