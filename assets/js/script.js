@@ -2,6 +2,7 @@
 var timerClock = document.getElementById(".timerClock");
 // var startBtn = document.getElementsByClassName("startBtn");
 var startQ = document.getElementsByClassName(".startQ");
+var timer = document.getElementsByClassName(".timer");
 
 var secondLeft = 60;
 var timer;
