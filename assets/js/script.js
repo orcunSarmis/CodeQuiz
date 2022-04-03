@@ -7,7 +7,7 @@ var showTimer = document.querySelector("#timerClock");
 var index = 0;
  
 
-console.log(startQ);
+// console.log(startQ);
 
 var secondLeft = 60;
 var timer;
@@ -65,12 +65,12 @@ function callBack() {
 
 
 function showQuestion() {
-  index++;
+  // index++;
   var displayedQuestion = document.querySelector("#displayedQuestion");
   var option1 = document.querySelector("#option1");
   var option2 = document.querySelector("#option2");
   var option3 = document.querySelector("#option3");
-  console.log("show");
+  // console.log("show");
 
   displayedQuestion.textContent = myQuestions[index].question;
 
@@ -79,16 +79,23 @@ function showQuestion() {
        
   }
 
-  option1.addEventListener('click', verifyAnswer);
-  option2.addEventListener('click', verifyAnswer);
-  option3.addEventListener('click', verifyAnswer);
+  // option1.addEventListener('click', verifyAnswer);
+  // option2.addEventListener('click', verifyAnswer);
+  // option3.addEventListener('click', verifyAnswer);
 }
 
 function verifyAnswer(){
+
+  option1.addEventListener('click', verifyAnswer);
+  option2.addEventListener('click', verifyAnswer);
+  option3.addEventListener('click', verifyAnswer);
+
+  index++;
+  showQuestion();
   //verify the answers here
   //find the id of the button clicked
 }
-// start();\
+// start();
 
 function endGame(){
   //this function wil run based on multiple conditions 
