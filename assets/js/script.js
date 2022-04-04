@@ -121,9 +121,11 @@ function showQuestion() {
   option3.addEventListener('click', verifyAnswer);
 }
 
-function verifyAnswer(){
+function verifyAnswer(event){
 
-
+if () {
+  event.currentTarget.textContent = myQuestions[index].correctAnswer
+}
 
   index++;
   showQuestion();
