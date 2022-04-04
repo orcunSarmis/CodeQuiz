@@ -34,7 +34,17 @@ var myQuestions = [
         correctAnswer: "npm"
       },
       {
-          numb: 3,
+        numb: 3,
+      question: "How do you create a function in JavaScript?",
+      answers: {
+        option1: "function = myFunction()",
+        option2: "function myFunction()",
+        option3: "function:myFunction()m"
+      },
+      correctAnswer: "function myFunction()"
+    },
+      {
+          numb: 4,
         question: "Which tool can you use to ensure code quality?",
         answers: {
           option1: "Angular",
@@ -42,7 +52,28 @@ var myQuestions = [
           option3: "ESLint"
         },
         correctAnswer: "ESLint"
-      }
+      },
+      {
+        numb: 5,
+      question: "How to write an IF statement in JavaScript?",
+      answers: {
+        option1: "if i == 5 then",
+        option2: "if(i==5)",
+        option3: "if i = 5"
+      },
+      correctAnswer: "if(i==5)"
+    },
+    {
+      numb: 6,
+    question: "How does a WHILE loop start?",
+    answers: {
+      option1: "while (i <= 10; i++)",
+      option2: "while (i <= 10)",
+      option3: "while i = 1 to 10"
+    },
+    correctAnswer: "ESLint"
+  }
+
     ];
 
 
@@ -66,7 +97,7 @@ function callBack() {
 
 
 function showQuestion() {
-  index++;
+  // index++;
   var displayedQuestion = document.querySelector("#displayedQuestion");
   var option1 = document.querySelector("#option1");
   var option2 = document.querySelector("#option2");
@@ -94,7 +125,7 @@ function verifyAnswer(){
 
 
 
-  // index++;
+  index++;
   showQuestion();
   //verify the answers here
   //find the id of the button clicked
