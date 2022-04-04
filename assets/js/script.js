@@ -128,7 +128,7 @@ function verifyAnswer(event){
 if (event.currentTarget.textContent === myQuestions[index].correctAnswer) {
   console.log('it worked');
 }else{
-  
+  // check wrong answers
 }
 
 if (index > myQuestions.length) {
@@ -143,6 +143,11 @@ if (index > myQuestions.length) {
 // start();
 
 function endGame(){
+  clearInterval(timer); //stops the timer
+  var playerName = prompt("What is your name?");
+  console.log(playerName);
+  console.log(secondLeft);
+  //create object name and score
   //this function wil run based on multiple conditions 
 }
 
