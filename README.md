@@ -1,8 +1,10 @@
-# <JavascriptPasswordGenerator-OrcunSarmis>
+README 
+
+# <CodeQuiz-OrcunSarmis>
 
 ## About the Project
 
-Modify starter code to create a password generator application that enables users to generate random passwords that match their selection criteria. 
+Create a timed coding quiz with multiple-choice questions.
 
 ## Table of Contents 
 
@@ -18,34 +20,35 @@ Modify starter code to create a password generator application that enables user
 
 Open the URL in your web browser.
 
-https://orcunsarmis.github.io/Password-Generator/
+https://orcunsarmis.github.io/CodeQuiz/
 
 ## Built With
 
-HTML,CSS, Javascript
+HTML,CSS,Javascript
 
 ## Usage
 
-The password generator is designed to enable users to generate random passwords based on several criteria such as length, lower or uppercase, numeric, special characters. 
+When opening the URL, users are invited to click the Start button which will start the timer and trigger the first question.
 
-Click on the ‘Generate Password’ button to generate a new password: 
+Click on the ‘Start’ button to start the quiz:
 
+[Screenshot of the Start button]
 
-Users are prompted to select the desired length for their password (minimum 8 characters, maximum 128):
+When answering a question correctly, another question is automatically triggered:
 
+[Screenshot of another question generated after a correct answer] 
 
-If the user type in letters instead of numbers or select a number <8 or >128 for this first prompt, an error message pops up: 
+If the question is answered incorrectly, time is subtracted from the clock:
 
+[Screenshot of time subtracted from the clock]
 
-Users are then prompted to select the character type (lowercase, uppercase, numeric and/or special characters):
+The game finishes when all questions have been answered or when the timer reaches 0:
 
+[Screenshot of end of the game]
 
-If the user does not select at least one of the character type, an error message is displayed:
+Users are invited to save their initials and their score:
 
-
-Once all the criteria have been selected, a password that meets the selected criteria is generated:
-
-
+[Screenshot of end of the game with initial and score saving]
 
 ## License
 
@@ -66,3 +69,4 @@ Ideas to improve this application are welcome:
 ## Contact
 
 Orcun Sarmis: yorcunsarmis@gmail.com
+Project Link: https://github.com/orcunSarmis/CodeQuiz

@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: ; */
 }
 
+/* Styling body elements. */
 body {
   display: flex;
   flex-direction: column;
@@ -15,6 +15,7 @@ body {
   padding: 0px;
 }
 
+/* Targeting title. */
 .code {
   display: flex; 
   flex-wrap: wrap; 
@@ -25,6 +26,7 @@ body {
   color: crimson;
 }
 
+/* Styling timer/score element. */
 .timer {
   display: flex;
   justify-content: flex-end;
@@ -33,6 +35,7 @@ body {
   font-size: 25px;
 }
 
+/* Styling rules container elements. */
 .container1 {
   display: flex;
   flex-direction: column;
@@ -42,6 +45,7 @@ body {
   font-family: 'Varela Round', sans-serif;
 }
 
+/* Styling question paragraph. */
 #displayedQuestion {
   display: flex;
 flex-wrap: wrap;
@@ -51,6 +55,7 @@ font-size: 30px;
 font-family: 'Varela Round', sans-serif;
 }
 
+/* Styling buttons. */
 #option1, #option2, #option3 {
 display: flex;
 flex-wrap: wrap;
@@ -58,6 +63,7 @@ justify-content: center;
 padding: 15px;
 }
 
+/* Styling start button. */
 #startQuiz {
   display: flex; 
   flex-wrap: wrap;
@@ -70,80 +76,3 @@ padding: 15px;
 }
 
 
-/* .divClock {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: flex-end;
-} */
-
-/* .rules.active {
-  z-index: 5;
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
-} */
-
-/* .container {
-  height: 60px;
-  width: 100%;
-  border-bottom: 1px solid lightgrey;
-  display: flex;
-  align-items: center;
-  padding: 0 30px;
-  font-size: 20px;
-  font-weight: 600;
-} */
-
-/* .startBtn {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: center;  
-  text-align: center; 
-  font-size: 25px; 
-  font-weight: 500; 
-  background: #557A95; 
-  color: #5D5C61; 
-  padding: 15px 30px; 
-  border-radius: 5px;
-} */
-
-/* .hide {
-  display: none;
-
-} */
-
-/* * {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    /* background: linear-gradient(0deg, rgba(19,41,61,1) 0%, rgba(237,245,249,1) 63%); */
-  /* } */
-/*   
-  button {
-    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
-    border-radius: 8px;
-    color: #13293d;
-    cursor: pointer;
-    font-size: 2em;
-    letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 255px;
-    padding: 20px 52px;
-    text-align: center;
-    transition-duration: 0.15s;
-    transition-property: background-color;
-    transition-timing-function: linear;
-    margin-top: 0.6em;
-  }
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  } */ 

@@ -1,17 +1,12 @@
-// var startBtn = document.querySelector(".startBtn button");
+//  These lines takes the dom elements and store the variables necessary for the app.
 var timerClock = document.getElementById(".timerClock");
-// var startBtn = document.getElementsByClassName("startBtn");
-// var startQ = document.getElementsByClassName(".startQ");
 var startQ = document.querySelector("#startQuiz");
 var showTimer = document.querySelector("#timerClock");
-var index = 0;
- 
+var index = 0; // index for store 0 for start from first question.
+var secondLeft = 60; // Total quiz time is 60 seconds, stored in variable.
+var timer; // This line store score inside of variable.
 
-// console.log(startQ);
-
-var secondLeft = 60;
-var timer;
-
+// This lines create question, options and correct answers array.
 var myQuestions = [
     {
         numb: 1,
@@ -73,21 +68,21 @@ var myQuestions = [
     },
     correctAnswer: "while (i <= 10; i++)"
   }
-
     ];
 
-
+    // This lines start the timer and hide the rules and show the questions on the screen.
 function start() {
   quizRules.style.display = "none";
   timer = setInterval(callBack,1000);
   showQuestion();
 }
 
+// This lines for show the timer/score. 
 function callBack() {
     secondLeft--;
     showTimer.textContent = "Score: " + secondLeft;
 
-
+// This lines clear the timer and end the game.
     if (secondLeft < 1) {
         clearInterval(timer);
         endGame();
@@ -95,25 +90,26 @@ function callBack() {
     console.log(secondLeft);
 }
 
-
+// Function for show questions.
 function showQuestion() {
-  // index++;
   var displayedQuestion = document.querySelector("#displayedQuestion");
   var option1 = document.querySelector("#option1");
   var option2 = document.querySelector("#option2");
   var option3 = document.querySelector("#option3");
   // console.log("show");
 
+  // This lines for display questions one by one.
   displayedQuestion.textContent = myQuestions[index].question;
   option1.textContent = myQuestions[index].answers.option1;
   option2.textContent = myQuestions[index].answers.option2;
   option3.textContent = myQuestions[index].answers.option3;
   // console.log("show");
 
+
+  // This conditional hides the quiz rules.
   if (!quizRules.classList.contains("hide")) {
       quizRules.classList.add("hide");
-      
-      
+         
   }
 
   option1.addEventListener('click', verifyAnswer);
@@ -121,16 +117,19 @@ function showQuestion() {
   option3.addEventListener('click', verifyAnswer);
 }
 
+// This function verify answers.
 function verifyAnswer(event){
   console.log({answer: event.currentTarget.textContent});
   console.log({ question: myQuestions[index]});
 
+  // This lines checks if user inputs match with correct answer.
 if (event.currentTarget.textContent === myQuestions[index].correctAnswer) {
   console.log('it worked');
 }else{
   // check wrong answers
 }
 
+// this lines stops the quiz after 6th question.
 if (index > myQuestions.length) {
   endGame();
 }
@@ -147,87 +146,15 @@ function endGame(){
   var playerName = prompt("What is your name?");
   console.log(playerName);
   console.log(secondLeft);
+
+  // var player = {
+  //   name = "";
+  //   playerScore = ;
+  // }
   //create object name and score
   //this function wil run based on multiple conditions 
 }
-
-
 startQ.addEventListener("click", start);
 
 
 
-
-
-
-// function buildQuiz() {
-// // variable to store the HTML output
-//     var output = []; 
-// // for each question...
-//     myQuestions.forEach(
-//         (currentQuestion, questionNumber) => {
-// // variable to store the list of possible answers
-//             var answers = [];
-// // and for each available answer...
-// for(letter in currentQuestion.answers){
-
-
-// }
-
-//         }
-//     )
-// }
-
-
-
-// function showResult() {}
-
-
-// document.body.appendChild(startBtn);
-// startBtn.innerHTML = "Start";
-
-// var h1El = document.createElement("h1");
-// let startBtn = document.createElement("button");
-// var text = document.createTextNode("Start Quiz");
-// let divBtn = document.createElement("divBtn");
-// var divTimer = document.createElement("timer");
-// var divClock = document.createElement("divclock");
-// var divQuiz = document.createElement("divQuiz");
-// var divResult = document.createElement("divResult");
-// var rules = document.querySelector(".rules");
-// document.getElementById("quizRules").style.display = "none";
-
-// h1El.textContent = "Code Quiz";
-// divClock.textContent ="Time";
-
-// document.body.appendChild(h1El);
-// document.body.appendChild(divBtn);
-// document.body.appendChild(divClock);
-// document.body.appendChild(divQuiz);
-// document.body.appendChild(divResult);
-// startBtn.appendChild(text);
-// document.body.appendChild(startBtn);
-// document.body.appendChild(divTimer);
-// document.getElementsByClassName(divBtn);
-
-
-
-// h1El.classList.add("quiz-title");
-// startBtn.classList.add("startBtn");
-// divBtn.classList.add("divBtn");
-// divTimer.classList.add("timerClock");
-// divClock.classList.add("clockCl");
-// divQuiz.classList.add("quizCon");
-
-// h1El.setAttribute("style", "font-size: 50px; font-wiegth: bold; display: flex; flex-wrap: wrap; justify-content: center; text-align: center;  color: red;");
-// startBtn.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: center;  text-align: center; font-size: 25px; font-weight: 500; background: #557A95; color: #5D5C61; padding: 15px 30px; border-radius: 5px;");
-// divClock.setAttribute("style", "display: flex; flex-wrap: wrap; justify-content: flex-end;");
-// divQuiz.setAttribute("id", "quiz");
-// divBtn.setAttribute("id", "div-1");
-// divClock.setAttribute("id", "clock");
-// divTimer.setAttribute("id", "divtime");
-
-    // if (quizRules.style.display !== "none") {
-    //     quizRules.style.display = "none";
-    // }else {
-    //     quizRules.style.display = "block";
-    // }
