@@ -144,18 +144,32 @@ if (index >= myQuestions.length) {
 
 function endGame(){
   clearInterval(timer); //stops the timer
-  var highScore = prompt("What is your name?");
+  var playerName = prompt("What is your name?");
   // console.log(playerName);
   // console.log(secondLeft);
 
   var highScore = {
-    name: "",
+    name: playerName,
     playerScore: secondLeft
   };
 
-  showHighScore.textContent = "High Score: " + highScore;
+  showHighScore.textContent = "High Score: " + highScore.name +  ": " + highScore.playerScore;
   //create object name and score
   //this function wil run based on multiple conditions 
+}
+// store high scores in locakl storage
+
+function save() {
+  var new_showHighScore = document.getElementById("").value;
+  if(localStorage.getItem("showHighScore") == null){
+    localStorage.setItem("showHighScore", "[]");
+  }
+
+  var old_showHighScore = JSON.parse(localStorage.getItem("showHighScore"));
+  old_showHighScore.push(new_showHighScore);
+
+  localStorage.setItem("showHighScore", JSON.stringify (old_showHighScore));
+  
 }
 startQ.addEventListener("click", start);
 
