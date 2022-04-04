@@ -71,7 +71,7 @@ var myQuestions = [
       option2: "while (i <= 10)",
       option3: "while i = 1 to 10"
     },
-    correctAnswer: "ESLint"
+    correctAnswer: "while (i <= 10; i++)"
   }
 
     ];
@@ -123,10 +123,10 @@ function showQuestion() {
 
 function verifyAnswer(event){
 
-if () {
-  event.currentTarget.textContent = myQuestions[index].correctAnswer
+if (event.currentTarget.textContent === myQuestions[index].correctAnswer) {
+  
 }
-
+console.log(event);
   index++;
   showQuestion();
   //verify the answers here
