@@ -122,11 +122,17 @@ function showQuestion() {
 }
 
 function verifyAnswer(event){
+  console.log({answer: event.currentTarget.textContent});
+  console.log({ question: myQuestions[index]});
 
 if (event.currentTarget.textContent === myQuestions[index].correctAnswer) {
-  
+  console.log('it worked');
 }
-console.log(event);
+
+if (index > myQuestions.length) {
+  endGame();
+}
+// console.log(event);
   index++;
   showQuestion();
   //verify the answers here
