@@ -127,6 +127,8 @@ function verifyAnswer(event){
 
 if (event.currentTarget.textContent === myQuestions[index].correctAnswer) {
   console.log('it worked');
+}else{
+  
 }
 
 if (index > myQuestions.length) {
