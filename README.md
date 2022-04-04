@@ -45,12 +45,14 @@ If the question is answered incorrectly, time is subtracted from the clock:
 [Screenshot of time subtracted from the clock]
 
 The game finishes when all questions have been answered or when the timer reaches 0:
+![Screenshot (46)](https://user-images.githubusercontent.com/79064464/161560166-292ddc90-dd9d-45a5-b3fb-5bef539e6296.png)
 
-[Screenshot of end of the game]
+
 
 Users are invited to save their initials and their score:
 
-[Screenshot of end of the game with initial and score saving]
+![Screenshot (48)](https://user-images.githubusercontent.com/79064464/161560364-48038f8a-d593-4921-a4e0-78cfa97a0bfb.png)
+
 
 ## License
 
