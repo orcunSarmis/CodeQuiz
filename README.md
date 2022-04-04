@@ -32,19 +32,23 @@ When opening the URL, users are invited to click the Start button which will sta
 
 Click on the ‘Start’ button to start the quiz:
 
-![Screenshot (44)](https://user-images.githubusercontent.com/79064464/161537452-e6958ab9-2617-46ea-bea8-3451023b222e.png)
+![Screenshot (51)](https://user-images.githubusercontent.com/79064464/161561051-4898c376-c892-45e9-9df5-270d86311315.png)
+
 
 
 When answering a question correctly, another question is automatically triggered:
 
- ![Screenshot (45)](https://user-images.githubusercontent.com/79064464/161537651-09bfb2ac-3d9b-4cec-ac64-e2220b1218f7.png)
+ 
+![Screenshot (49)](https://user-images.githubusercontent.com/79064464/161561182-95029a48-a874-403a-9c68-752c04d982a3.png)
 
 
 If the question is answered incorrectly, time is subtracted from the clock:
 
-[Screenshot of time subtracted from the clock]
+![Screenshot (48)](https://user-images.githubusercontent.com/79064464/161561209-e7d8500b-2e63-40de-b4e9-2d7cd8e664fa.png)
+
 
 The game finishes when all questions have been answered or when the timer reaches 0:
+ 
 ![Screenshot (46)](https://user-images.githubusercontent.com/79064464/161560166-292ddc90-dd9d-45a5-b3fb-5bef539e6296.png)
 
 
