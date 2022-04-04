@@ -23,7 +23,7 @@ body {
   text-align: center;  
   padding: 15px 30px;
   font-size: 35px;
-  color: crimson;
+  color: #e27d60;
 }
 
 /* Styling timer/score element. */
@@ -60,7 +60,10 @@ font-family: 'Varela Round', sans-serif;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+background-color: #85dcb8;
+border-radius: 8px;
 padding: 15px;
+margin: 10px;
 }
 
 /* Styling start button. */
@@ -69,10 +72,20 @@ padding: 15px;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center; 
+  background-color: #e27d60;
   padding: 15px 30px;
   font-size: 25px; 
   font-weight: 500;
+  border-radius: 8px;
   font-family: 'Varela Round', sans-serif;
+}
+
+#highScore {
+  display: flex;
+  justify-content: center;
+  padding: 15px ;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 20px;
 }
 
 

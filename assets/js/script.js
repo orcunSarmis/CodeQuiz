@@ -5,6 +5,7 @@ var showTimer = document.querySelector("#timerClock");
 var index = 0; // index for store 0 for start from first question.
 var secondLeft = 60; // Total quiz time is 60 seconds, stored in variable.
 var timer; // This line store score inside of variable.
+var showHighScore = document.querySelector("#highScore");
 
 // This lines create question, options and correct answers array.
 var myQuestions = [
@@ -105,7 +106,6 @@ function showQuestion() {
   option3.textContent = myQuestions[index].answers.option3;
   // console.log("show");
 
-
   // This conditional hides the quiz rules.
   if (!quizRules.classList.contains("hide")) {
       quizRules.classList.add("hide");
@@ -124,18 +124,19 @@ function verifyAnswer(event){
 
   // This lines checks if user inputs match with correct answer.
 if (event.currentTarget.textContent === myQuestions[index].correctAnswer) {
-  console.log('it worked');
+  // console.log('it worked');
 }else{
+  secondLeft -= 10;
   // check wrong answers
 }
-
+index++; // Increment index.
 // this lines stops the quiz after 6th question.
-if (index > myQuestions.length) {
+if (index >= myQuestions.length) {
   endGame();
-}
-// console.log(event);
-  index++;
+}else {
+// console.log(event); 
   showQuestion();
+}
   //verify the answers here
   //find the id of the button clicked
 }
@@ -143,14 +144,16 @@ if (index > myQuestions.length) {
 
 function endGame(){
   clearInterval(timer); //stops the timer
-  var playerName = prompt("What is your name?");
-  console.log(playerName);
-  console.log(secondLeft);
+  var highScore = prompt("What is your name?");
+  // console.log(playerName);
+  // console.log(secondLeft);
 
-  // var player = {
-  //   name = "";
-  //   playerScore = ;
-  // }
+  var highScore = {
+    name: "",
+    playerScore: secondLeft
+  };
+
+  showHighScore.textContent = "High Score: " + highScore;
   //create object name and score
   //this function wil run based on multiple conditions 
 }
