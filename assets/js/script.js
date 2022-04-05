@@ -155,23 +155,48 @@ function endGame(){
 
   showHighScore.textContent = "High Score: " + highScore.name +  ": " + highScore.playerScore;
   //create object name and score
-  //this function wil run based on multiple conditions 
+  //this function wil run based on multiple conditions
+  save(highScore)  //added this to save the high score object
 }
-// store high scores in locakl storage
 
-function save() {
-  var new_showHighScore = document.getElementById("").value;
-  if(localStorage.getItem("showHighScore") == null){
-    localStorage.setItem("showHighScore", "[]");
-  }
+function save(highScore) {
+  //get array of highscores from localstorage and JSON.parse it.  If it's null, set it to an empty array
+  let highScores = JSON.parse(localStorage.getItem('showHighScores')) || [];
 
-  var old_showHighScore = JSON.parse(localStorage.getItem("showHighScore"));
-  old_showHighScore.push(new_showHighScore);
+  //push new highScore into highScores
+  highScores.push(highScore);
 
-  localStorage.setItem("showHighScore", JSON.stringify (old_showHighScore));
-  
+  //write highScores back to localStorage
+  localStorage.setItem('showHighScores', JSON.stringify(highScores));
 }
 startQ.addEventListener("click", start);
 
+// function endGame(){
+//   clearInterval(timer); //stops the timer
+//   var playerName = prompt("What is your name?");
+//   // console.log(playerName);
+//   // console.log(secondLeft);
 
+//   var highScore = {
+//     name: playerName,
+//     playerScore: secondLeft
+//   };
 
+//   showHighScore.textContent = "High Score: " + highScore.name +  ": " + highScore.playerScore;
+//   //create object name and score
+//   //this function wil run based on multiple conditions 
+// }
+// // store high scores in locakl storage
+
+// function save() {
+//   var new_showHighScore = document.getElementById("").value;
+//   if(localStorage.getItem("showHighScore") == null){
+//     localStorage.setItem("showHighScore", "[]");
+//   }
+
+//   var old_showHighScore = JSON.parse(localStorage.getItem("showHighScore"));
+//   old_showHighScore.push(new_showHighScore);
+
+//   localStorage.setItem("showHighScore", JSON.stringify (old_showHighScore));
+  
+// }
